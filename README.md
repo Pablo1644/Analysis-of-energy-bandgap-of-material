@@ -39,6 +39,6 @@ This repository contains a Python script designed to calculate the energy bandga
 
 
 ## Notes
-<u>Adjust the energy range for the linear fit as necessary by modifying the energies_for_fit and alpha_hv_for_fit selection criteria.
-Ensure the files are correctly formatted and located in the same directory as the script for proper execution.</u>
+Adjust the energy range for the linear fit as necessary by modifying the energies_for_fit and alpha_hv_for_fit selection criteria.
+Ensure the files are correctly formatted and located in the same directory as the script for proper execution.
 
