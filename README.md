@@ -1,6 +1,6 @@
 # Energy Bandgap Calculation from Transmission Measurements
 
-This repository contains a Python script designed to calculate the energy bandgap of materials using the Tauc-plot method. <b> Data should be in .txt format</b>. The script processes transmission measurement data from multiple files and performs a series of computations to determine the bandgap energy.
+This repository contains a Python script designed to calculate the energy bandgap of materials using the Tauc-plot method. </br> <b> Data should be in .txt format</b>. The script processes transmission measurement data from multiple files and performs a series of computations to determine the bandgap energy.
 ## Description
 
 ## The script follows these steps:
