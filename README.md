@@ -20,7 +20,7 @@ This repository contains a Python script designed to calculate the energy bandga
 <b>6. Tauc Plot Calculation:</b>
         Computes αhν^1/2 values and plots them against energies. </br>
 <b>7. Fitting a Linear Curve:</b>
-        Selects energy values in a specified range (3.97 to 4.762 eV) for fitting a linear curve.
+        Selects energy values in a specified range (for example 3.97 to 4.762 eV in my case) for fitting a linear curve.
         Uses NumPy's polyfit to fit the linear curve to the selected data points.
         Calculates the energy bandgap from the linear fit. </br>
 <b>8. Plotting the Fitted Curve:</b>
