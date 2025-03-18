@@ -6,21 +6,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 d = 72E-9  # nm
-print(d)
-print(type(d))
 source = os.getcwd()
-print(source)
 list_of_files = fnmatch.filter(os.listdir('.'), '*.txt')  # used files
-print(list_of_files)
 data = pd.read_fwf(source + '\\' + list_of_files[0], skiprows=1, header=None)
-print(data)
 data.columns = ['λ[nm]', 'TRANSMISSION']
-print(data)
 wavelengths = data['λ[nm]']
-print(wavelengths)
-print(data['TRANSMISSION'])
 
-print(list_of_files[1:])
 for file in list_of_files[1:]:
     temp = pd.read_fwf(source + '\\' + list_of_files[0], skiprows=1, header=None)
     temp.columns = ['λ[nm]', 'TRANSMISSION']
@@ -28,7 +19,6 @@ for file in list_of_files[1:]:
 
 data['TRANSMISSION'] = data['TRANSMISSION'] / len(list_of_files)
 average_transmission = data['TRANSMISSION']
-print(average_transmission)
 
 plt.xlabel("wavelengths [nm]")
 plt.ylabel("average transmission (0-1)")
@@ -59,7 +49,6 @@ alpha_hv_for_fit = [alpha_hv[x] for x in range(len(energies)) if 3.97 < energies
 
 coef = np.polyfit(energies_for_fit, alpha_hv_for_fit, 1)
 
-
 a, b = coef[0].tolist(), coef[1].tolist()
 
 energies_fit = [-b/a]
@@ -70,7 +59,6 @@ energies_fit += sorted(energies_for_fit)
 for i in range(1,energies_fit.__len__()):
     alpha_fv_fit.append(a*energies_fit[i]+b)
 
-print(energies_fit,alpha_fv_fit)
 
 plt.plot(energies_for_fit, alpha_hv_for_fit)
 plt.plot(energies_fit,alpha_fv_fit, color='green')
